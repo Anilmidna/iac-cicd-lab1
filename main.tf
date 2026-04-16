@@ -40,7 +40,7 @@ resource "aws_s3_bucket" "lab" {
 resource "aws_s3_object" "hello" {
   bucket  = aws_s3_bucket.lab.id
   key     = "1.txt"
-      content = "Updated via pull request - ${var.student_suffix}"
+      content = "Updated via the pull request - ${var.student_suffix}"
 }
 
 output "bucket_name" {
