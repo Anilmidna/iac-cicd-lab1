@@ -26,7 +26,7 @@ variable "student_suffix" {
 
 # Create the S3 bucket
 resource "aws_s3_bucket" "lab" {
-  bucket = "sigmoid-iac12345-${var.student_suffix}"
+  bucket = "sigmoid-iac123456-${var.student_suffix}"
 
   tags = {
     Name    = "sigmoid-iac-${var.student_suffix}"
@@ -40,7 +40,7 @@ resource "aws_s3_bucket" "lab" {
 resource "aws_s3_object" "hello" {
   bucket  = aws_s3_bucket.lab.id
   key     = "1.txt"
-      content = "Updated via the pull request - ${var.student_suffix}"
+      content = "Updated via  pull request - ${var.student_suffix}"
 }
 
 output "bucket_name" {
