@@ -26,7 +26,7 @@ variable "student_suffix" {
 
 # Create the S3 bucket
 resource "aws_s3_bucket" "lab" {
-  bucket = "sigmoid-iac123-${var.student_suffix}"
+  bucket = "sigmoid-iac12345-${var.student_suffix}"
 
   tags = {
     Name    = "sigmoid-iac-${var.student_suffix}"
